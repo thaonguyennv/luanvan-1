@@ -1,0 +1,25 @@
+doctype html
+html
+  head
+    title
+      | Luanvan
+    meta[name="viewport" content="width=device-width, initial-scale=1"]
+    meta[charshet="utf-8"]
+    = csrf_meta_tags
+    = csp_meta_tag
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    link[rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"]
+    script[src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"]
+    script[src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"]
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  body
+    div
+      - if current_admin.present?
+        div id="header_logedin"
+          |Welcome, #{current_admin.email}
+          / p id="p1" = link_to "Hi", admin_session_path
+          span = link_to "Log out", destroy_admin_session_path, :method => :delete
+      / a.btn.btn-info.btn-lg href="#{root_path}"
+      /   span.glyphicon.glyphicon-log-out
+      /   |  Log out
+    = yield
