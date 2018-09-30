@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rdate:</strong>
+  <%= @car_rental_contract.rDate %>
+</p>
+
+<p>
+  <strong>Rcontent:</strong>
+  <%= @car_rental_contract.rContent %>
+</p>
+
+<p>
+  <strong>Rvalue:</strong>
+  <%= @car_rental_contract.rValue %>
+</p>
+
+<%= link_to 'Edit', edit_car_rental_contract_path(@car_rental_contract) %> |
+<%= link_to 'Back', car_rental_contracts_path %>

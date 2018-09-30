@@ -1,0 +1,37 @@
+<%= form_with(model: investment_contract, local: true) do |form| %>
+  <% if investment_contract.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(investment_contract.errors.count, "error") %> prohibited this investment_contract from being saved:</h2>
+
+      <ul>
+      <% investment_contract.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :iDate %>
+    <%= form.date_select :iDate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iContent %>
+    <%= form.text_area :iContent %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iDiscount %>
+    <%= form.text_field :iDiscount %>
+  </div>
+
+  <div class="field">
+    <%= form.label :iProfit %>
+    <%= form.text_field :iProfit %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

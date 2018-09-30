@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Idate:</strong>
+  <%= @investment_contract.iDate %>
+</p>
+
+<p>
+  <strong>Icontent:</strong>
+  <%= @investment_contract.iContent %>
+</p>
+
+<p>
+  <strong>Idiscount:</strong>
+  <%= @investment_contract.iDiscount %>
+</p>
+
+<p>
+  <strong>Iprofit:</strong>
+  <%= @investment_contract.iProfit %>
+</p>
+
+<%= link_to 'Edit', edit_investment_contract_path(@investment_contract) %> |
+<%= link_to 'Back', investment_contracts_path %>

@@ -1,0 +1,21 @@
+rails generate scaffold Brand brandCode:string{5} brandName:string{30}
+
+rails generate scaffold ModelCar model:string{20} noSeat:integer factoryPrice:decimal
+
+rails generate scaffold Car licensePlate:string{15} mileage:decimal status:string{1024} price:decimal
+
+rails generate scaffold Driver dName:string{30} dSex:string{10} dDob:date dIdNo:string{15} dTel:string{10} dAddress:string{100} dLicenseNo:string{15} dStart:date
+
+rails generate scaffold Customer cName:string{30} cSex:string{10} cDob:date cIdNo:string{15} cTel:string{10} cAddress:string{100}
+
+rails generate scaffold Member mName:string{30} mSex:string{10} mDob:date mIdNo:string{15} mTel:string{10} mAddress:string{100}
+
+rails g scaffold CarRentalContract rDate:date rContent:text rValue:decimal
+
+rails g scaffold InvestmentContract iDate:date iContent:text iDiscount:float iProfit:float
+
+rails g scaffold TheDriver thedriverPrice:decimal thedriverWork:integer
+
+rails g scaffold CarRentalContractDet rdetDepDay:date rdetNoDay:integer rdetCarPrice:decimal rdetDriverPrice:decimal
+
+rails g scaffold Passenger pName:string{30} pSex:string{10} pDob:date

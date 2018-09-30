@@ -1,0 +1,37 @@
+<%= form_with(model: car_rental_contract_det, local: true) do |form| %>
+  <% if car_rental_contract_det.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(car_rental_contract_det.errors.count, "error") %> prohibited this car_rental_contract_det from being saved:</h2>
+
+      <ul>
+      <% car_rental_contract_det.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rdetDepDay %>
+    <%= form.date_select :rdetDepDay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rdetNoDay %>
+    <%= form.number_field :rdetNoDay %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rdetCarPrice %>
+    <%= form.text_field :rdetCarPrice %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rdetDriverPrice %>
+    <%= form.text_field :rdetDriverPrice %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

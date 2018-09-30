@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Investment Contracts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Idate</th>
+      <th>Icontent</th>
+      <th>Idiscount</th>
+      <th>Iprofit</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @investment_contracts.each do |investment_contract| %>
+      <tr>
+        <td><%= investment_contract.iDate %></td>
+        <td><%= investment_contract.iContent %></td>
+        <td><%= investment_contract.iDiscount %></td>
+        <td><%= investment_contract.iProfit %></td>
+        <td><%= link_to 'Show', investment_contract %></td>
+        <td><%= link_to 'Edit', edit_investment_contract_path(investment_contract) %></td>
+        <td><%= link_to 'Destroy', investment_contract, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Investment Contract', new_investment_contract_path %>

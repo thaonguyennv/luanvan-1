@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Rdetdepday:</strong>
+  <%= @car_rental_contract_det.rdetDepDay %>
+</p>
+
+<p>
+  <strong>Rdetnoday:</strong>
+  <%= @car_rental_contract_det.rdetNoDay %>
+</p>
+
+<p>
+  <strong>Rdetcarprice:</strong>
+  <%= @car_rental_contract_det.rdetCarPrice %>
+</p>
+
+<p>
+  <strong>Rdetdriverprice:</strong>
+  <%= @car_rental_contract_det.rdetDriverPrice %>
+</p>
+
+<%= link_to 'Edit', edit_car_rental_contract_det_path(@car_rental_contract_det) %> |
+<%= link_to 'Back', car_rental_contract_dets_path %>
